@@ -1,13 +1,13 @@
 import {Link } from 'react-router-dom'
 import DownloadBtn from './downloadBtn.jsx'
+import Socials from './socials.jsx'
 import {footerlist,socials} from './data.jsx'
 import {FaCopyright} from 'react-icons/fa'
-import Socials from './socials.jsx'
 const Footer = ()=>{
 	return <footer className="footer">
 	<section className="footer_content">	
 
-        <div className="footer_top">	
+        <div className="footer_top md_hidden">	
         	<span>	<DownloadBtn/></span>
         	<span><Socials/></span>
         </div>	
@@ -40,7 +40,7 @@ const Footer = ()=>{
 		<div className="footer_section2">	
 			<div className="Tc">
 				<span> 2024 <FaCopyright/></span>
-				<span>	Made with love by Dave</span>
+				<span>{`Made with love by <Dave />`}</span>
 			</div>
 				<span className='footer_sm_hidden'>	<Socials/></span>
 		    <div className="select_country"></div>

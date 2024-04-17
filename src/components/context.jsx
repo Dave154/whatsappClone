@@ -15,6 +15,9 @@ const AppProvider =({children})=>{
 			if(screenSize <=1200){
 				setIsFeatures(false)
 			}
+			if(screenSize >= 1200){
+				setIsSideOpen(false)
+			}
 
 }
 const checkScroll=()=>{

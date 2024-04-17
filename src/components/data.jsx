@@ -135,6 +135,20 @@ export const footerlist=[
 	]
 
 export const socials = [
-		<FaTwitter/>,<FaYoutube/>,<FaFacebook/>,<FaInstagram/>
+	{
+		url:'#',
+		icon:<FaTwitter/>
+	},
+	{
+		url:'#',
+		icon:<FaYoutube/>
+	},{
+		url:'#',
+		icon:<FaFacebook/>
+	},{
+		url:'#',
+		icon:<FaInstagram/>
+	},
+		
 
 	]
