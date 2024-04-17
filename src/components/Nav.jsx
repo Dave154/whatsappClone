@@ -9,8 +9,8 @@ import {data} from './data.jsx'
 const Nav = ()=>{
 	const {scrollY,openSide,IsFeatures,setIsFeatures,checkSize ,menuItems,setMenuItems,showFeatures}=useGlobe()
 	console.log(scrollY)
-		return<header className = {`header ${scrollY >= 20 && 'active'} ${scrollY >=58 && 'active2'} ${IsFeatures && 'header_white'}`}>
-		<nav className= 'nav'>
+		return<header className = {`header container ${scrollY >= 1 && 'active'} ${scrollY >=20 && 'active2'} ${IsFeatures && 'header_white'}`}>
+		<nav className= 'nav '>
 			<button className='menu_btn lg_hidden' onClick={openSide}><FaBars/></button>
 			<span className="whatsapp_logo ">
 			<Link to='/'>	

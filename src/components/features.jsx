@@ -7,9 +7,8 @@ const Features =({items})=>{
 				const {text,icon,link,info,arrow}=item
 				console.log(link)
 				return<Link to={link} key={index}>
-					 <li className="features_list_item" >
+					 <li className="features_list_item" >k
 				<div>
-					
 					<span className="features_list_item_icon"><i>{icon}</i></span>
 					<h5>{text}</h5>
 					<p>{info}</p>
