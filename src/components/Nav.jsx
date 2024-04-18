@@ -17,7 +17,7 @@ const Nav = ()=>{
 			<img src="https://static.whatsapp.net/rsrc.php/v3/y7/r/DSxOAUB0raA.png" alt="logo"/>
 			</Link>
 			</span>
-			<div className="menu sm_hidden">
+			<div className="menu xmd_hidden">
 				
 			<ul className="menu_list">
 				{menuItems.map(item=>{

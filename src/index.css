@@ -40,11 +40,15 @@ body {
 }
 
 /*REUSABLE*/
+.section{
+		display: grid;
+	place-items: center;
+}
 img{
 	width: 100%;
 }
 .container{
-	padding-inline:2rem;
+	padding-inline:1rem;
 }
 .color_green{
 	color: var(--green);
@@ -129,7 +133,6 @@ li{
 	align-items: center;
 	padding: 10px;
 	border-radius: 30px;
-	
 }
  .download_nav {
 	width: 0;
@@ -314,11 +317,11 @@ li{
 }
 .hero_content{
 	display: flex;
-	justify-content: center;
+/*	justify-content: center;*/
 	align-items: center;
 	position: relative;
+	padding-block: 5rem;
 	color: white;
-	background: white;
 	overflow: hidden;
 	border-radius: 20px;
 }
@@ -330,18 +333,19 @@ li{
     width: 100%;
 }
 .hero_bg img{
-	height: 100%;
 	object-fit: cover;
 }
 .hero_main{
 	position: relative;
 	z-index: 1;
 	padding: 30px;
+/*	height: 90%;*/
 }
 .hero_main > div{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	flex-direction: column-reverse;
+	justify-content:flex-start;
 	max-width: 60rem;
 }
 .main_left{
@@ -349,21 +353,22 @@ li{
 }
 .main_left h1{
    font-size: clamp(2rem, 5vw, 8rem);
-   line-height: 60px;
+  padding: 0;
+  margin: 0;
    margin-bottom: 30px;
 }
 .main_left p{
    margin-bottom: 40px;
 }
-.main_left span{
-	gap: 10px;
+.main_left span button{
+		gap: 10px;
 }
 .main_right{
 
 }
 .hero_main img{
-	width: 20rem;
-	object-fit: contain;
+	width: 100%;
+	object-fit: cover;
 }
 .moji{
 	transform: translateY(-17px);
@@ -371,6 +376,27 @@ li{
 .hero_bottom_txt{
 	text-align: right;
 }
+.sm_hidden{
+	display: none;
+}
+/*SECTION1*/
+.section1{
+	padding: 50px;
+}
+.tiny_images{
+	margin: 0 2rem;
+	max-width: 70rem;
+}
+
+/*SECTION2*/
+
+.section2 span {
+	max-width: 40rem;
+	text-align: center;
+	font-size: clamp(1.2rem, 2vw, 4rem);
+	padding: 10px;
+}
+
 /*FOOTER*/
 .footer{
 	background: var(--secondary_background);
@@ -495,13 +521,36 @@ li{
 	grid-template-columns: repeat(4, 1fr);
 }
 
+/*HERO*/
+.hero_content{
+	justify-content: center;
+}
+	.hero_main > div{
+
+	flex-direction: row;
+ 	justify-content: space-between;
+}
+.hero_main img{
+	width:  20rem;
+}
+.sm_hidden{
+	display: block;
+}
+}
+@media (min-width:1024px){
+	.hero_content{
+		height: 600px;
+	}
+	.hero_bg img{
+		height: 100%;
+	}
 }
 
 @media (min-width:1200px){
 	.lg_hidden{
 		display: none;
 	}
-	.sm_hidden{
+	.xmd_hidden{
 		display: block;
 	}
 	.download{

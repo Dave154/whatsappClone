@@ -8,7 +8,7 @@ const AppProvider =({children})=>{
 	const [screenSize ,setScreenSize]= useState('')
 	const [menuItems,setMenuItems]= useState(data);
 	const [IsFeatures, setIsFeatures]= useState(false);
-	const [scrollY,setScrollY]= useState()
+	const [scrollY,setScrollY]= useState(0)
 
 		const checkSize =()=>{
 	setScreenSize(window.innerWidth)
@@ -25,8 +25,10 @@ const checkScroll=()=>{
 	// if(window.scrollY  )
 }
 	useEffect(()=>{
-		window.addEventListener('resize', checkSize)
-		return ()=>window.removeEventListener('resize', checkSize)
+		checkSize()
+		 window.addEventListener('resize', checkSize)
+
+		 return ()=>window.removeEventListener('resize', checkSize)
 	},[screenSize])
 
 useEffect(()=>{
@@ -59,7 +61,8 @@ useEffect(()=>{
 	setIsFeatures,
 	menuItems,
 	setMenuItems,
-	scrollY
+	scrollY,
+	screenSize
 		}}>{children}</AppContext.Provider>
 }
 
