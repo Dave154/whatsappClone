@@ -41,18 +41,44 @@ const Home =()=>{
 				   <div>	
 				   	<motion.img src={img2} alt="" 
 				   	initial={{opacity:0, y:10}}
-				   	animate={{opacity:1,y:0}}	/>				   		
-				   	<img className='moji' src={img3} alt=""/>
+				   	animate={{opacity:1,y:0}}
+				   	transition={{delay:.5,duration:.5}}	
+				   	/>				   		
+				   	<motion.img className='moji' src={img3} alt=""
+				   	initial={{opacity:0, y:0}}
+				   	animate={{opacity:1,y:-20}}
+				   	transition={{delay:1,type:'spring', stiffness:400 }}	
+				   	/>
 						 		   		
-				   			<img src={img4} alt=""/>
+				   			<motion.img src={img4} alt=""
+				   	initial={{opacity:0, y:10}}
+				   	animate={{opacity:1,y:-20}}
+				   	transition={{delay:1.5,duration:.5}}
+				   			/>
 						 		
-				   			<img src={img5} alt=""className='sm_hidden'/>
+				   			<motion.img src={img5} alt=""className='sm_hidden'
+				   	initial={{opacity:0, y:10}}
+				   	animate={{opacity:1,y:-20}}
+				   	transition={{delay:2.5}}
+				   			/>
 					
-				   			<img src={img6} alt=""className='sm_hidden'/>
+				   			<motion.img src={img6} alt=""className='sm_hidden' 
+				   					initial={{opacity:0, y:10}}
+				   	animate={{opacity:1,y:-20}}
+				   	transition={{delay:3,duration:.5}}
+				   			/>
 				   			
-				   			<img className='sm_hidden moji' src={img7} alt=""/>
+				   			<motion.img className='sm_hidden moji' src={img7} alt="" 
+				   					initial={{opacity:0, y:10}}
+				   	animate={{opacity:1,y:-40}}
+				   	transition={{delay:3.5,type:'spring', stiffness:400 }}
+				   			/>
 				   			
-				   			<img src={img8} alt=""className='sm_hidden'/>
+				   			<motion.img src={img8} alt=""className='sm_hidden'
+				   	initial={{opacity:0, y:10}}
+				   	animate={{opacity:1,y:-20}}
+				   	transition={{delay:4,duration:.5}}
+				   			/>
 						 </div>
 				   	</article>
 				   </div>
@@ -64,7 +90,7 @@ const Home =()=>{
 
 		<section className=" section section1 container">
 			<div className='tiny_images'>
-				<img src={screenSize >=1024 ? section1img1 : screenSize >= 756 ? section1img2: section1img3 } alt=""/>
+				<motion.img src={screenSize >=1024 ? section1img1 : screenSize >= 756 ? section1img2: section1img3 } alt=""/>
 			</div>
 		</section>
 
@@ -90,7 +116,7 @@ const Home =()=>{
 					<div className='section4_end_text'>
 						<h2>{head}</h2>
 						<p>{desc}</p>
-						{arrow ? <Link to='/learnmore/:id'>Learn More <span>{arrow}</span></Link> : <a href="#">Learn More <span><BsArrowUpRight/></span></a> }
+						{arrow ? <Link to={`/learnmore/${id}`}>Learn More <span>{arrow}</span></Link> : <a href="#">Learn More <span><BsArrowUpRight/></span></a> }
 					</div>
 					<div className='section4_end_img'>
 						<img src={image1} alt=""/>

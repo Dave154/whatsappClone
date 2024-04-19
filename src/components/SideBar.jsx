@@ -37,13 +37,19 @@ const SideBar =()=>{
 			<ul className="side_list">
 				{data.map(item=>{
 					const {id,text,items}=item
-					return <li key={id} className="side_list_item" onClick={()=>handleHide(items)}>
+					return <li key={id} className="side_list_item" onClick={()=>{
+						handleHide(items)
+						if (!items) {
+						closeSide()
+						}
+					}
+				}>
 					<span><h3>{text}</h3> {items && <i>{hide ? <FaPlus/> : <FaMinus/> }</i>} 	</span>
 					{items && <div className={`side_features_list_container  ${hide && 'hide'}`} ref={refCont2}>
 						<ul className={`side_features_list`} ref={refCont1}>
 							{items.map((item,index)=>{
 								const {text,arrow,icon,link}=item
-								return <li key={index}>
+								return <li key={index} onClick={closeSide}>
 								{text === 'Whatsapp for Business' ?<a href={link}className='side_features_list_item' >
 								<i className='color_green'>{icon}</i> 
 								<h5>{text} </h5> <i>{arrow}</i>
