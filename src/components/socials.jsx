@@ -6,7 +6,7 @@ const Socials =()=>{
 	return<div className="socials">
 			{socials.map((social,index)=>{
 				const {url,icon}=social
-				return<a href={url}>
+				return<a href={url} key={index}>
 				<i className="fancy_btn" key={index}>{icon}</i>	
 				</a>
 			})}

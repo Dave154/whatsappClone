@@ -32,6 +32,7 @@ const checkScroll=()=>{
 	},[screenSize])
 
 useEffect(()=>{
+	checkScroll()
 	window.addEventListener('scroll',checkScroll)
 	return ()=>window.removeEventListener(scroll,checkScroll)
 },[scrollY])

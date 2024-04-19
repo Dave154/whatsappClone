@@ -1,5 +1,5 @@
 import { BsArrowRight,BsArrowUpRight } from "react-icons/bs";
-import {FaTwitter,FaYoutube,FaFacebook,FaInstagram} from 'react-icons/fa'
+import {FaTwitter,FaYoutube,FaFacebook,FaInstagram,FaWhatsapp} from 'react-icons/fa'
 
 export const data = [
 		{id:1,
@@ -148,6 +148,10 @@ export const socials = [
 	},{
 		url:'#',
 		icon:<FaInstagram/>
+	},
+	{
+		url:'#',
+		icon:<FaWhatsapp/>
 	},
 		
 

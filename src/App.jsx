@@ -12,7 +12,7 @@ function App() {
   <Side/>
    <Routes>
      <Route path='/' element={<Home/>}></Route>
-     <Route path='/about' element = {<h1>About</h1>}/>
+     <Route path='*/' element={<h1>Error</h1>}/>
    </Routes>
 <Footer/>
     </>
